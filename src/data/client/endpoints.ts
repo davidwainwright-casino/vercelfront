@@ -1,0 +1,18 @@
+export const API_ENDPOINTS = {
+  PRODUCTS: '/api/games',
+  PRODUCTS_POPULAR: '/popular-products',
+  CATEGORIES: '/api/categories',
+  TAGS: '/api/tags',
+  SHOPS: '/shops',
+  USERS: '/users',
+  USERS_ME: '/me',
+  USERS_LOGIN: '/token',
+  USERS_REGISTER: '/register',
+  USERS_FORGOT_PASSWORD: '/forget-password',
+  USERS_VERIFY_FORGOT_PASSWORD_TOKEN: '/verify-forget-password-token',
+  USERS_RESET_PASSWORD: '/reset-password',
+  USERS_CHANGE_PASSWORD: '/change-password',
+  USERS_LOGOUT: '/logout',
+  SETTINGS: '/settings',
+  SETTINGS_CONTACT_US: '/contact-us',
+};
