@@ -13,7 +13,7 @@ const routes = {
   privacy: '/privacy',
   password: '/password',
   orderUrl: (tracking_number: string) => `/orders/${tracking_number}`,
-  productUrl: (slug: string) => `https://jacob-7-1277cp.mooo.com/api/play/${slug}`,
+  productUrl: (slug: string) => `https://09-09-nsb.mooo.com/api/play/${slug}`,
   tagUrl: (slug: string) => `/products/tags/${slug}`,
   shopUrl: (slug: string) => `/providers/${slug}`,
 };
