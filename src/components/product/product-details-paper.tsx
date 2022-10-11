@@ -4,16 +4,11 @@ import routes from '@/config/routes';
 import AnchorLink from '@/components/ui/links/anchor-link';
 import { ShoppingCartIcon } from '@/components/icons/shopping-cart-icon';
 import Image from '@/components/ui/image';
-import AddToCart from '@/components/cart/add-to-cart';
 import { useModalAction } from '@/components/modal-views/context';
 import { Tag } from '@/types';
 import { LabelIcon } from '@/components/icons/label-icon';
 
 import placeholder from '@/assets/images/placeholders/product.svg';
-import { isFree } from '@/lib/is-free';
-import { DownloadIcon } from '@/components/icons/download-icon';
-import pluralize from 'pluralize';
-import FreeDownloadButton from './free-download-button';
 
 interface Props {
   product: Product;
@@ -31,15 +26,10 @@ export default function ProductDetailsPaper({ product, className }: Props) {
     provider,
     tags,
     shop,
-    orders_count,
-    total_downloads,
-    preview_url,
     image,
     price,
     sale_price,
   } = product;
-  const isFreeItem = isFree(sale_price ?? price);
-
   return (
     <div
       className={cn(
@@ -48,10 +38,10 @@ export default function ProductDetailsPaper({ product, className }: Props) {
       )}
     >
       <div className="lg:block lg:pr-5">
-        <h1 className="text-base font-medium text-dark dark:text-light 3xl:text-xl">
+        <h2 className="text-base font-medium text-dark dark:text-light 3xl:text-xl">
           {name}
-        </h1>
-        <div className="items-center pt-1.5 lg:flex lg:space-x-6 lg:pt-2.5 3xl:pt-4">
+        </h2>
+        <div className="items-center pt-1.5 lg:flex lg:space-x-6">
           <div className="flex items-center pb-4 lg:pb-0">
             <div className="relative flex h-7 w-7 flex-shrink-0">
               <Image
@@ -63,12 +53,12 @@ export default function ProductDetailsPaper({ product, className }: Props) {
                 className="rounded-full"
               />
             </div>
-            <h2 className="pl-2.5 font-medium dark:text-dark-base lg:text-dark lg:dark:text-light-400">
+            <h2 className="pl-2 pb-1 font-medium dark:text-dark-base lg:text-dark lg:dark:text-light-400">
               <AnchorLink
                 href={routes.shopUrl(provider.slug)}
                 className="hover:text-brand"
               >
-                {'Provider: ' + provider.name ?? ''}
+                {'by ' + provider.name ?? ''}
               </AnchorLink>
             </h2>
           </div>

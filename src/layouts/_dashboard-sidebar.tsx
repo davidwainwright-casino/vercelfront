@@ -20,7 +20,7 @@ const menuItems = [
   {
     icon: <PurchaseIcon className="h-[15px] w-[15px] sm:h-4 sm:w-4" />,
     label: 'Purchases',
-    path: routes.purchases,
+    path: routes.profile,
   },
   {
     icon: <LockIcon className="h-[18px] w-[18px] sm:h-5 sm:w-5" />,

@@ -80,7 +80,6 @@ export function Sidebar({
             />
             <NavLink
               title={'Github'}
-              target='_blank'
               href="https://github.com/wrenchwright"
               isCollapse={isCollapse}
               icon={
@@ -88,7 +87,12 @@ export function Sidebar({
               }
             />
           </nav>
-
+          <NavLink
+                title={'Settings'}
+                 href={routes.profile}
+                 isCollapse={isCollapse}
+                icon={<SettingIcon className="h-[18px] w-[18px] text-current" />}
+               />
           <nav className="mt-auto flex flex-col pb-4">
             <NavLink
               title={'Help'}
@@ -153,10 +157,5 @@ export default function SidebarDrawerView() {
     </>
   );
   // removed from sidebar as is auth
-  //            <NavLink
-  //               title={'Settings'}
-  //               href={routes.profile}
-  //               isCollapse={isCollapse}
-  //               icon={<SettingIcon className="h-[18px] w-[18px] text-current" />}
-  //             />
+
 }

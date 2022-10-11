@@ -25,8 +25,8 @@ const AuthorizedMenuItems = [
     path: routes.profile,
   },
   {
-    label: 'Purchases',
-    path: routes.purchases,
+    label: 'Transactions',
+    path: routes.profile,
   },
   {
     label: 'Password',
@@ -92,19 +92,18 @@ function LoginMenu() {
     );
   }
   if (isAuthorized && me && !isLoading) {
-    // disabled auth user //return <AuthorizedMenu user={me} />;
-    return;
+    return <AuthorizedMenu user={me} />;
   }
-  //return (
-  //  <Button
-  //    variant="icon"
-  //    aria-label="User"
-  //    className="flex"
-  //    onClick={() => openModal('LOGIN_VIEW')}
-  //  >
-  //    <UserIcon className="h-5 w-5" />
-  //  </Button>
-  //  );
+  return (
+    <Button
+      variant="icon"
+      aria-label="User"
+      className="flex"
+      onClick={() => openModal('LOGIN_VIEW')}
+    >
+      <UserIcon className="h-5 w-5" />
+    </Button>
+    );
 }
 
 interface HeaderProps {
@@ -121,7 +120,7 @@ export default function Header({
   const { asPath } = useRouter();
   useSwapBodyClassOnScrollDirection();
   return (
-    <header className="app-header sticky top-0 left-0 z-30 flex h-6 w-full items-center justify-between border-b border-light-300 bg-light py-1 px-4 dark:border-dark-300 dark:bg-dark-250 sm:h-[70px] sm:px-6">
+    <header className="app-header sticky top-0 left-0 z-30 flex h-12 w-full items-center justify-between border-b border-light-300 bg-light py-1 px-4 dark:border-dark-300 dark:bg-dark-250 sm:h-[70px] sm:px-6">
       <div className="flex items-center gap-4">
         {showHamburger && (
           <Hamburger
@@ -136,7 +135,7 @@ export default function Header({
         <SearchButton className="hidden sm:flex" />
         <ThemeSwitcher />
         <GridSwitcher />
-
+        <LoginMenu />
 
       </div>
     </header>

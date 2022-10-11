@@ -133,6 +133,18 @@ export interface User {
     bio: string;
     contact: string;
     avatar: Attachment;
+    casino: {
+      USD: {
+        player_id: string;
+        currency: string;
+        balance: string;
+      };
+      EUR: {
+        player_id: string;
+        currency: string;
+        balance: string;
+      };
+    };
   };
   role: string;
   created_at: string;

@@ -11,9 +11,8 @@ export default function Copyright({ className }: { className?: string }) {
         rel="noopener noreferrer"
         className="hover:text-brand-dark"
       >
-        Casino Dog Tool
+        - 777.dog
       </a>
-      .
     </div>
   );
 }

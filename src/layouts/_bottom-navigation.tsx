@@ -20,7 +20,6 @@ export default function BottomNavigation() {
         <HomeIcon className="h-5 w-5" />
       </Button>
       <SearchButton />
-      {router.asPath !== routes.checkout && <CartButton className="mt-1.5" />}
       <Hamburger onClick={() => openDrawer('MOBILE_MENU')} />
     </nav>
   );

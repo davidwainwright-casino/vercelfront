@@ -7,7 +7,7 @@ import { useIsDarkMode } from '@/lib/hooks/use-is-dark-mode';
 import { siteSettings } from '@/data/static/site-settings';
 
 export default function Logo({
-  className = 'w-20',
+  className = 'w-20 h-10',
   ...props
 }: React.AnchorHTMLAttributes<{}>) {
   const isMounted = useIsMounted();

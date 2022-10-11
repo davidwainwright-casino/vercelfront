@@ -16,15 +16,6 @@ import placeholder from '@/assets/images/placeholders/product.svg';
 function OrderedItem({ item }: { item: OrderedFile }) {
   const { name, image, preview_url } = item.file.fileable ?? {};
   const { mutate } = useMutation(client.orders.generateDownloadLink, {
-    onSuccess: (data) => {
-      function download(fileUrl: string, fileName: string) {
-        var a = document.createElement('a');
-        a.href = fileUrl;
-        a.setAttribute('download', fileName);
-        a.click();
-      }
-      download(data, name);
-    },
   });
   return (
     <div className="flex items-start gap-4 border-b border-light-400 py-4 last:border-b-0 dark:border-dark-400 sm:gap-5">
@@ -59,7 +50,6 @@ function OrderedItem({ item }: { item: OrderedFile }) {
         </div>
         <button
           className="flex items-center gap-2 font-semibold text-brand hover:text-brand-dark sm:h-12 sm:rounded sm:border sm:border-light-500 sm:bg-transparent sm:py-3 sm:px-5 sm:dark:border-dark-600"
-          onClick={() => mutate(item.digital_file_id)}
         >
           <DownloadIcon className="h-auto w-4" />
           Download

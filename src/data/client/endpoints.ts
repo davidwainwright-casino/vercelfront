@@ -3,7 +3,7 @@ export const API_ENDPOINTS = {
   PRODUCTS_POPULAR: '/popular-products',
   CATEGORIES: '/api/categories',
   TAGS: '/api/tags',
-  SHOPS: '/shops',
+  SHOPS: '/api/shops',
   USERS: '/users',
   USERS_ME: '/me',
   USERS_LOGIN: '/token',
@@ -13,6 +13,6 @@ export const API_ENDPOINTS = {
   USERS_RESET_PASSWORD: '/reset-password',
   USERS_CHANGE_PASSWORD: '/change-password',
   USERS_LOGOUT: '/logout',
-  SETTINGS: '/settings',
+  SETTINGS: '/api/settings',
   SETTINGS_CONTACT_US: '/contact-us',
 };
