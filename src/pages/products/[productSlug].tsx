@@ -112,19 +112,8 @@ const ProductPage: NextPageWithLayout<
           
         <div className="relative lg:space-x-14 xl:space-x-20 3xl:space-x-28">
             <div className="mx-auto -mt-6 sm:-mt-2 md:-mt-4 max-w-[1050px]">
-            <a
-          onClick={() => setCopyButtonStatus(true)}
-          rel="noreferrer"
-          target="_blank"
-          className="transition-fill-colors flex items-center justify-center gap-2 font-semibold duration-200 pointer-events-auto cursor-pointer opacity-100 min-h-[46px] sm:h-12 rounded py-3 px-4 md:px-5 bg-brand text-white hover:bg-brand-dark focus:bg-brand-dark !mt-5 w-full text-sm tracking-[0.2px] lg:!mt-7"
-          >
-          Play {me.profile.id} {name}
-        </a>
-
-            {copyButtonStatus && (
-            <GameIframePopup game_id={slug} iframe_url={real_url + '?player=' + me.profile.casino.USD.player_id + '&currency=' + me.profile.casino.USD.currency} real_url={real_url + '?player=' + me.profile.casino.USD.player_id + '&currency=' + me.profile.casino.USD.currency} />
-            )}
-            </div>
+          <GameIframePopup game_id={slug} iframe_url={real_url + '?player=' + me.profile.casino.USD.player_id + '&currency=' + me.profile.casino.USD.currency} real_url={real_url + '?player=' + me.profile.casino.USD.player_id + '&currency=' + me.profile.casino.USD.currency} />
+          </div>
           </div> 
           <ProductDetailsPaper product={product} className="lg:hidden" />
           <div className="lg:mx-auto lg:flex lg:space-x-14 xl:space-x-20 3xl:max-w-[1200px] 3xl:space-x-28">
