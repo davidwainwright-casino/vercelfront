@@ -148,7 +148,7 @@ const ProductPage: NextPageWithLayout<
     </div>
   );
 };
-ProductPage.authorization = true;
+ProductPage.authorization = false;
 ProductPage.getLayout = function getLayout(page) {
   return <Layout>{page}</Layout>;
 };
