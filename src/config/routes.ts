@@ -13,8 +13,8 @@ const routes = {
   privacy: '/privacy',
   password: '/password',
   orderUrl: (tracking_number: string) => `/orders/${tracking_number}`,
-  productUrl: (slug: string) => `/products/${slug}`,
-  //productUrl: (slug: string) => `https://01-dev-casino.777.dog/api/play/${slug}`,
+  //productUrl: (slug: string) => `/products/${slug}`,
+  productUrl: (slug: string) => `https://02-casino.777.dog/api/play/${slug}`,
   tagUrl: (slug: string) => `/products/tags/${slug}`,
   shopUrl: (slug: string) => `/providers/${slug}`,
 };
